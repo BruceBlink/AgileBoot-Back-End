@@ -33,7 +33,6 @@ public class IpUtil {
             ia = InetAddress.getByAddress(ip);
         } catch (UnknownHostException e) {
             log.error("解析Ip失败", e);
-            e.printStackTrace();
         }
         if (ia == null) {
             return false;
