@@ -10,7 +10,7 @@ networks:
 services:
   mysql:
     image: mysql:8.0.29
-    container_name: mysql
+    container_name: mysql8
     restart: unless-stopped # 重启策略：除非手动停止容器，否则自动重启
     environment:
       - TZ=Asia/Shanghai
@@ -27,7 +27,7 @@ services:
 
   redis:
     image: redis:7.2.3
-    container_name: redis
+    container_name: redis7
     restart: unless-stopped # 重启策略：除非手动停止容器，否则自动重启
     command: redis-server /etc/redis/redis.conf --requirepass 12345 --appendonly no # 启动 Redis 服务并添加密码为：123456，默认不开启 Redis AOF 方式持久化配置
     environment:
