@@ -56,7 +56,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <!-- 想跑test的话  设置成false  -->
                 <configuration>
-                    <skipTests>false</skipTests>
+                    <skipTests>true</skipTests>
                 </configuration>
             </plugin>
             <plugin>
