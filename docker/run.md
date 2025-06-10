@@ -1,7 +1,6 @@
+# 开发环境配置
 
-# 开发环境启动
-
-## 安装
+## 安装以及启动
 
 ```bash
 docker-compose -f docker-compose.yml -p agile-boot up -d
