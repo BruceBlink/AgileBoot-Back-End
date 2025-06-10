@@ -1,3 +1,4 @@
+use agileboot;
 create table sys_config
 (
     config_id       int auto_increment comment '参数主键'
