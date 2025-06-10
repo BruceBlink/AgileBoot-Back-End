@@ -21,7 +21,7 @@ services:
       - ./mysql/data:/var/lib/mysql # 持久化 MySQL 数据
       - ../sql/mysql8:/docker-entrypoint-initdb.d # 初始化 SQL 脚本目录
     ports:
-      - 33060:3306 # 暴露 3306 端口
+      - 33067:3306 # 暴露 33067 端口
     networks:
       - agileboot # 加入 "agileboot" 网络
 
