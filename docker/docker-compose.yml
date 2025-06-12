@@ -1,7 +1,3 @@
-
-
-version: '3'
-
 # 创建一个名为 "agileboot" 的桥接网络
 networks:
   agileboot:
