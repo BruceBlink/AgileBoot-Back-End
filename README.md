@@ -151,13 +151,23 @@ git clone https://github.com/valarchie/AgileBoot-Front-End
 
 - 安装[docker desktop](https://www.docker.com/products/docker-desktop/)(可选)
 
-- 在linux服务器或者直接运行[docker/run.md](docker/run.md)(如果已经安装了docker desktop)中的如下命令
+- 在linux服务器或者直接运行[docker/run.md](docker/run.md)(如果已经安装了docker desktop)中的如下命令：
 
   ```bash
+  cd docker
   docker-compose -f docker-compose.yml -p agile-boot up -d
   ```
+  
+  运行无报错则成功则说明mysql和redis的服务启动成功，无需再重新导入执行sql脚本初始化数据库
+  
+- 关于MySQL的配置见[my.cnf](docker/mysql/conf/my.cnf)
+
+- 在docker-compose.yml中配置了`docker-entrypoint-initdb.d`使用`sql/mysql8/*.sql`中的sql脚本进行数据库的初始化，初始化执行脚本的顺序按照脚本"名称的标号顺序"执行，原理见[docker-entrypoint-initdb.d初始化脚本的执行顺序](https://blog.likanug.top/article/20e5c571-bb7d-80d3-9f6e-c511b9923f93)，后续开发过程中只需要维护sql/mysql8目录下的sql脚本即可
+
+- 关于redis的配置见[redis.conf](docker/redis/config/redis.conf)
 
 #### 后端启动
+
 ```
 1. 生成所需的数据库表
 找到后端项目根目录下的sql目录中的agileboot_xxxxx.sql脚本文件(取最新的sql文件)。 导入到你新建的数据库中。
