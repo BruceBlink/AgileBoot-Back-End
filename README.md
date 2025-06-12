@@ -169,6 +169,7 @@ git clone https://github.com/valarchie/AgileBoot-Front-End
 #### 后端启动
 
 ```
+(如果使用docker-compose搭建的开发环境，则下面的1、2两个步骤可以省略，直接从3开始)
 1. 生成所需的数据库表
 找到后端项目根目录下的sql目录中的agileboot_xxxxx.sql脚本文件(取最新的sql文件)。 导入到你新建的数据库中。
 
